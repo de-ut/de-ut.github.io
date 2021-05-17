@@ -43,13 +43,13 @@ function changeTheme(theme){
 
     if(currTheme == lightTheme){
         currTheme = darkTheme;
-        theme = "dark";
+        theme = darkTheme;
         $('#day').removeClass('active');
         $('#night').addClass('active');   
     }
     else{    
         currTheme = lightTheme;
-        theme = "light";
+        theme = lightTheme;
         $('#night').removeClass('active');
         $('#day').addClass('active');   
     }
