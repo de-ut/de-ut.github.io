@@ -19,6 +19,12 @@ $(document).ready(function(){
     } else{
         $('#exchange-settings-input').val(value);
     }
+    $('.exchange-settings-buttons button.active').removeClass('active');
+    switch(value){
+        case 0.1: $($('.exchange-settings-buttons button')[0]).addClass('active'); break;
+        case 0.5: $($('.exchange-settings-buttons button')[1]).addClass('active'); break;
+        case 1.0: $($('.exchange-settings-buttons button')[2]).addClass('active'); break;
+    }
 })
 
 $('#exchange-input1').keyup(function(){
