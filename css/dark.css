@@ -88,3 +88,7 @@ a, a:hover{
 .popup{
     background: #ffffff11;
 }
+.exchange-settings-buttons button.active{
+    background: #0018FF;
+    color: #ffffff;
+}

@@ -46,10 +46,6 @@ a, a:hover{
 .exchange__menu a{
     color: #0018FF;
 }
-.exchange__menu label:hover{
-    background: #eff4f5;
-    color: #0018FF;
-}
 .exchange__menu a.active{
     background: #0018FF;
     color: #ffffff;
@@ -75,4 +71,8 @@ a, a:hover{
 }
 .popup{
     background: #00000011;
+}
+.exchange-settings-buttons button.active{
+    background: #0018FF;
+    color: #ffffff;
 }
