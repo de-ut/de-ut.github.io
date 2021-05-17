@@ -13,17 +13,18 @@ $(document).ready(function(){
     $('#BNBperBDM').text((1.0 / price).toFixed(9));
     $('#ShareOfPool').text(share.toFixed(2) + '%');
 
-    value = $.cookie('perc');
-    if(value == undefined){
+    perc = $.cookie('perc');
+    if(perc == undefined){
         $.cookie('perc', 0.5);
     } else{
+        value = parseFloat(perc);
         $('#exchange-settings-input').val(value);
-    }
-    $('.exchange-settings-buttons button.active').removeClass('active');
-    switch(value){
-        case 0.1: $($('.exchange-settings-buttons button')[0]).addClass('active'); break;
-        case 0.5: $($('.exchange-settings-buttons button')[1]).addClass('active'); break;
-        case 1.0: $($('.exchange-settings-buttons button')[2]).addClass('active'); break;
+        $('.exchange-settings-buttons button.active').removeClass('active');
+        switch(value){
+            case 0.1: $($('.exchange-settings-buttons button')[0]).addClass('active'); break;
+            case 0.5: $($('.exchange-settings-buttons button')[1]).addClass('active'); break;
+            case 1.0: $($('.exchange-settings-buttons button')[2]).addClass('active'); break;
+        }
     }
 })
 
