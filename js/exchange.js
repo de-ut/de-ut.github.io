@@ -64,7 +64,9 @@ $('#exchange-input2').keyup(function(){
 $('.exchange-settings-buttons button').click(function(){
     $('.exchange-settings-buttons button.active').removeClass('active');
     $(this).addClass('active');
-    $('#exchange-settings-input').val($(this).text().slice(0, -1));
+    value = $(this).text().slice(0, -1);
+    $('#exchange-settings-input').val(value);
+    $.cookie('perc', value);
 })
 
 $('#exchange-settings-input').keyup(function(){
