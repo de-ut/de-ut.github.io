@@ -106,9 +106,31 @@ function keyPressed() {
     }
 }
 
+function touchStarted() {
+    if (gameOver) {
+        player = new Player(settings.playerWidth, settings.playerHeight)
+        walls = new Queue(5)
+
+        speed = settings.initSpeed
+        distance = 0
+        score = 0
+        tickerNext = 0
+
+        gameOver = false
+
+        color_change = 0
+        return
+    }
+    player.jump()
+}
+
 function keyReleased() {
     if (keyCode == 32 || keyCode == 38) {
         player.fall()
         console.log("SPACE RELEASED")
     }
+}
+
+function touchEnded() {
+    player.fall()
 }
