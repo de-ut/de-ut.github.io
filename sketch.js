@@ -3,6 +3,10 @@ walls = new Queue(5)
 
 speed = settings.initSpeed
 
+if(/AppleWebKit/.test(navigator.userAgent) && /Mobile/.test(navigator.userAgent)){
+    window.alert('GO FUCK YOURSELF APPLE-GAY-BOY')
+}
+
 let score = 0
 highscore = localStorage.getItem('mygameHighscore');
 if (!highscore) {
